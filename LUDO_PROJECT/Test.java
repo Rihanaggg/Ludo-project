@@ -1,3 +1,5 @@
+package LUDO_PROJECT;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -115,24 +117,8 @@ public class Test extends Application {
             
         root.setCenter(board);
 
-        // Create a flow pane to hold the controls
-        FlowPane controls = new FlowPane();
-        controls.setHgap(10);
-        controls.setPadding(new Insets(10));
-
-        // Add a button for rolling the dice
-        Button rollButton = new Button("Roll dice");
-        rollButton.setOnAction(event -> {
-            int roll = (int)(Math.random() * 6 +1 );
-            diceLabel.setText("Dice: " + roll);
-        });
-        controls.getChildren().add(rollButton);
-
-        // Add a label to display the result of rolling the dice
-        diceLabel = new Label("Dice: ");
-        controls.getChildren().add(diceLabel);
-
-        root.setBottom(controls);
+       Roll_dice dice = new Roll_dice();
+       root.setBottom(dice.createControls());
 
         // Create a scene and add the root pane to it
         Scene scene = new Scene(root);
