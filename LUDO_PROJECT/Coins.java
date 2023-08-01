@@ -14,11 +14,13 @@ public class Coins {
         private int row;
         private int col;
         private Circle circle;
+        private String name;
 
-        public Coins(int row, int col, Circle circle) {
+        public Coins(int row, int col, Circle circle, String name) {
             this.row = row;
             this.col = col;
             this.circle = circle;
+            this.name = name;
         }
 
         public int getRow() {
@@ -31,6 +33,11 @@ public class Coins {
 
         public int getCol() {
             return col;
+        }
+
+        public String getname()
+        {
+            return name;
         }
 
         public void setCol(int col) {

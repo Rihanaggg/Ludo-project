@@ -25,4 +25,10 @@ public class Roll_dice {
 
         return controls;
     }
+
+    public static void moveCoin()
+    {
+        
+    }
+
 }
