@@ -2,13 +2,10 @@ package LUDO_PROJECT;
 
 import java.util.List;
 import java.util.Random;
-
 import javafx.geometry.Insets;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 
 public class Roll_dice {
@@ -46,26 +43,28 @@ public class Roll_dice {
 
     public void moveCoin(Coins coin , int roll)
     {
-        boolean success = squares.get(coin.getRow()).get(coin.getCol()).getChildren().remove(coin);
-        System.out.println(success);
-        System.out.println("row" + coin.getRow() + "col" + coin.getCol());
-
-        coin.setRow(7);
-        coin.setCol(roll);
-        if(roll == 6){
+        if(coin.isHome() && roll == 6){
             coin.setRow(6);
             coin.setCol(1);
+            squares.get(coin.getRow()).get(coin.getCol()).getChildren().remove(coin);
+            squares.get(coin.getRow()).get(coin.getCol()).getChildren().add(coin);
+        }else{
+            coin.setRow(7);
+            coin.setCol(roll);
+            squares.get(coin.getRow()).get(coin.getCol()).getChildren().remove(coin);
+            squares.get(coin.getRow()).get(coin.getCol()).getChildren().add(coin);
+
+            
         }
         System.out.println("row" + coin.getRow() + "col" + coin.getCol());
-        // squares.get(7).get(roll).getChildren().add(coin);
-        boolean fail = squares.get(coin.getRow()).get(coin.getCol()).getChildren().add(coin);
-        System.out.println(fail);
+        System.out.println("row" + coin.getRow() + "col" + coin.getCol());
 
     }
 
     public  int roll() {
-
+        
         int diceValue = random.nextInt(maxValue) + 1;
+        
         if(diceValue == 6){
             consecutiveSixes++ ;
             // for 3 times consecutive 6

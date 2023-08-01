@@ -1,14 +1,5 @@
 package LUDO_PROJECT;
-import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
 
 public class Coins extends Circle {
         private int row;
@@ -45,6 +36,7 @@ public class Coins extends Circle {
         }
 
         public boolean isHome(){
+<<<<<<< HEAD
              return true;
         }
 
@@ -53,4 +45,8 @@ public class Coins extends Circle {
             
         }
 
+=======
+            return true;
+        }
+>>>>>>> 2cd38468051d271037ebca2f9033bdbfcd7571cf
     }
