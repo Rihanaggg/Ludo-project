@@ -14,6 +14,7 @@ public class Coins extends Circle {
         private int row;
         private int col;
         private String name;
+        
 
         public Coins(int row, int col, String name, double radius) {
             super(radius);
@@ -42,4 +43,14 @@ public class Coins extends Circle {
         public void setCol(int col) {
             this.col = col;
         }
+
+        public boolean isHome(){
+             return true;
+        }
+
+        public boolean isFinalPath(){
+            return false;
+            
+        }
+
     }
