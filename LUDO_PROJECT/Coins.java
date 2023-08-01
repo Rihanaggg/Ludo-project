@@ -36,17 +36,11 @@ public class Coins extends Circle {
         }
 
         public boolean isHome(){
-<<<<<<< HEAD
-             return true;
+            return true;
         }
 
         public boolean isFinalPath(){
-            return false;
-            
-        }
-
-=======
-            return true;
-        }
->>>>>>> 2cd38468051d271037ebca2f9033bdbfcd7571cf
+            return false;            
+        }         
+    
     }
