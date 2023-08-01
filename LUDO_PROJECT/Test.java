@@ -50,15 +50,15 @@ public class Test extends Application {
                 if (row > 8 && col > 8) background.setFill(Color.BLUE);
 
                 // Color the home rows
-                if (row == 7 && col < 6 && col > 0) background.setFill(Color.RED);
-                if (row < 6 && row > 0 && col == 7) background.setFill(Color.GREEN);
-                if (row == 7 && col > 8 && col < 14) background.setFill(Color.BLUE);
-                if (row > 8 && row < 14 && col == 7) background.setFill(Color.YELLOW);
+                if (row == 7 && col < 6 && col > 0) background.setFill(Color.YELLOW);
+                if (row < 6 && row > 0 && col == 7) background.setFill(Color.RED);
+                if (row == 7 && col > 8 && col < 14) background.setFill(Color.GREEN);
+                if (row > 8 && row < 14 && col == 7) background.setFill(Color.BLUE);
 
-				if(row == 6 && col == 1) background.setFill(Color.RED);
-				if(row == 1 && col == 8) background.setFill(Color.GREEN);
-				if(row == 8 && col == 13) background.setFill(Color.BLUE);
-				if(row == 13 && col == 6) background.setFill(Color.YELLOW);
+				if(row == 1 && col == 6) background.setFill(Color.RED);
+				if(row == 6 && col == 13) background.setFill(Color.GREEN);
+				if(row == 13 && col == 8) background.setFill(Color.BLUE);
+				if(row == 8 && col == 1) background.setFill(Color.YELLOW);
 
 				if (row > 0 && row < 5 && col > 0 && col < 5) background.setFill(Color.WHITE);
                 if (row < 5 && row > 0 && col > 9 && col < 14) background.setFill(Color.WHITE);
