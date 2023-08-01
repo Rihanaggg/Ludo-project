@@ -20,7 +20,7 @@ public class Test extends Application {
 
     private Label diceLabel;
 
-    private static List<Coins> coins = new ArrayList<>();
+    public static List<Coins> coins = new ArrayList<>();
 
     @Override
     public void start(Stage primaryStage) {
@@ -85,6 +85,8 @@ public class Test extends Application {
                 {
                     Circle coin_red_1 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_red_1.setFill(Color.RED); 
+                    coin_red_1.setStroke(Color.BLACK); // Set the border color to black
+                    coin_red_1.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_red_1);
                     coins.add(new Coins(row, col, coin_red_1, "coin_red_1"));
                 }
@@ -93,6 +95,8 @@ public class Test extends Application {
                 {
                     Circle coin_red_2 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_red_2.setFill(Color.RED);
+                    coin_red_2.setStroke(Color.BLACK); // Set the border color to black
+                    coin_red_2.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_red_2);
                     coins.add(new Coins(row, col, coin_red_2, "coin_red_2"));
 
@@ -102,6 +106,8 @@ public class Test extends Application {
                 {
                     Circle coin_red_3 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_red_3.setFill(Color.RED);
+                    coin_red_3.setStroke(Color.BLACK); // Set the border color to black
+                    coin_red_3.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_red_3);
                     coins.add(new Coins(row, col, coin_red_3, "coin_red_3"));
 
@@ -111,6 +117,8 @@ public class Test extends Application {
                 {
                     Circle coin_red_4 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_red_4.setFill(Color.RED);
+                    coin_red_4.setStroke(Color.BLACK); // Set the border color to black
+                    coin_red_4.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_red_4);
                     coins.add(new Coins(row, col, coin_red_4, "coin_red_4"));
 
@@ -122,6 +130,8 @@ public class Test extends Application {
                 {
                     Circle coin_green_1 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_green_1.setFill(Color.GREEN);
+                    coin_green_1.setStroke(Color.BLACK); // Set the border color to black
+                    coin_green_1.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_green_1);
                     coins.add(new Coins(row, col, coin_green_1, "coin_green_1"));
 
@@ -131,6 +141,8 @@ public class Test extends Application {
                 {
                     Circle coin_green_2 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_green_2.setFill(Color.GREEN);
+                    coin_green_2.setStroke(Color.BLACK); // Set the border color to black
+                    coin_green_2.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_green_2);
                     coins.add(new Coins(row, col, coin_green_2, "coin_green_2"));
 
@@ -140,6 +152,8 @@ public class Test extends Application {
                 {
                     Circle coin_green_3 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_green_3.setFill(Color.GREEN);
+                    coin_green_3.setStroke(Color.BLACK); // Set the border color to black
+                    coin_green_3.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_green_3);
                     coins.add(new Coins(row, col, coin_green_3, "coin_green_3"));
 
@@ -149,6 +163,8 @@ public class Test extends Application {
                 {
                     Circle coin_green_4 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_green_4.setFill(Color.GREEN);
+                    coin_green_4.setStroke(Color.BLACK); // Set the border color to black
+                    coin_green_4.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_green_4);
                     coins.add(new Coins(row, col, coin_green_4, "coin_green_4"));
 
@@ -160,6 +176,8 @@ public class Test extends Application {
                 {
                     Circle coin_blue_1 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_blue_1.setFill(Color.BLUE);
+                    coin_blue_1.setStroke(Color.BLACK); // Set the border color to black
+                    coin_blue_1.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_blue_1);
                     coins.add(new Coins(row, col, coin_blue_1, "coin_blue_1"));
 
@@ -169,6 +187,8 @@ public class Test extends Application {
                 {
                     Circle coin_blue_2 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_blue_2.setFill(Color.BLUE);
+                    coin_blue_2.setStroke(Color.BLACK); // Set the border color to black
+                    coin_blue_2.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_blue_2);
                     coins.add(new Coins(row, col, coin_blue_2, "coin_blue_2"));
 
@@ -178,6 +198,8 @@ public class Test extends Application {
                 {
                     Circle coin_blue_3 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_blue_3.setFill(Color.BLUE);
+                    coin_blue_3.setStroke(Color.BLACK); // Set the border color to black
+                    coin_blue_3.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_blue_3);
                     coins.add(new Coins(row, col, coin_blue_3, "coin_blue_3"));
 
@@ -187,6 +209,8 @@ public class Test extends Application {
                 {
                     Circle coin_blue_4 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_blue_4.setFill(Color.BLUE);
+                    coin_blue_4.setStroke(Color.BLACK); // Set the border color to black
+                    coin_blue_4.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_blue_4);
                     coins.add(new Coins(row, col, coin_blue_4, "coin_blue_4"));
 
@@ -198,6 +222,8 @@ public class Test extends Application {
                 {
                     Circle coin_yellow_1 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_yellow_1.setFill(Color.YELLOW);
+                    coin_yellow_1.setStroke(Color.BLACK); // Set the border color to black
+                    coin_yellow_1.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_yellow_1);
                 coins.add(new Coins(row, col, coin_yellow_1, "coin_yellow_1"));
                 }
@@ -206,6 +232,8 @@ public class Test extends Application {
                 {
                     Circle coin_yellow_2 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_yellow_2.setFill(Color.YELLOW);
+                    coin_yellow_2.setStroke(Color.BLACK); // Set the border color to black
+                    coin_yellow_2.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_yellow_2);
                     coins.add(new Coins(row, col, coin_yellow_2, "coin_yellow_2"));
                 }
@@ -214,6 +242,8 @@ public class Test extends Application {
                 {
                     Circle coin_yellow_3 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_yellow_3.setFill(Color.YELLOW);
+                    coin_yellow_3.setStroke(Color.BLACK); // Set the border color to black
+                    coin_yellow_3.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_yellow_3);
                     coins.add(new Coins(row, col, coin_yellow_3, "coin_yellow_3"));
                 }
@@ -222,6 +252,8 @@ public class Test extends Application {
                 {
                     Circle coin_yellow_4 = new Circle(SQUARE_SIZE / 2 - 2);
                     coin_yellow_4.setFill(Color.YELLOW);
+                    coin_yellow_4.setStroke(Color.BLACK); // Set the border color to black
+                    coin_yellow_4.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_yellow_4);
                     coins.add(new Coins(row, col, coin_yellow_4, "coin_yellow_4"));
                 }
@@ -249,7 +281,7 @@ public class Test extends Application {
         launch(args);
        
             System.out.println(coins.get(6).getname());
-        
-
+                        System.out.println(coins.get(6).getCol());
+            System.out.println(coins.get(6).getRow());
     }
 }

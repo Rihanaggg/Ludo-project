@@ -5,7 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 
-public class Roll_dice {
+public class Roll_dice extends Test {
     private Label diceLabel;
 
     public FlowPane createControls() {
@@ -28,7 +28,7 @@ public class Roll_dice {
 
     public static void moveCoin()
     {
-        
+        coins.get(1).setRow(8);
     }
 
 }
