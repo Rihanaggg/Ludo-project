@@ -19,22 +19,24 @@ public class Test extends Application {
     private static final int SQUARE_SIZE = 40;
 
     private Label diceLabel;
-
-    public static List<Coins> coins = new ArrayList<>();
+    public  GridPane board;
+    public List<Coins> coins; 
 
     @Override
     public void start(Stage primaryStage) {
         // Create a border pane to hold the game board and controls
         BorderPane root = new BorderPane();
-
+        coins = new ArrayList<>();
         // Create a grid pane to hold the game board
-        GridPane board = new GridPane();
+         board = new GridPane();
         board.setHgap(1);
         board.setVgap(1);
         board.setBackground(new Background(new BackgroundFill(Color.BLACK, CornerRadii.EMPTY, Insets.EMPTY)));
-
+        List<List<StackPane>> squares = new ArrayList<>();
+                
         // Add squares to the game board
         for (int row = 0; row < BOARD_SIZE; row++) {
+            List<StackPane> squareRow = new ArrayList<>();
             for (int col = 0; col < BOARD_SIZE; col++) {
                 StackPane square = new StackPane();
                 square.setPrefSize(SQUARE_SIZE, SQUARE_SIZE);
@@ -83,189 +85,194 @@ public class Test extends Application {
                 // red coins code
                 if(row == 2 && col == 2)
                 {
-                    Circle coin_red_1 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_red_1 = new Coins(row, col, "coin_red_1",SQUARE_SIZE / 2 - 2);
                     coin_red_1.setFill(Color.RED); 
                     coin_red_1.setStroke(Color.BLACK); // Set the border color to black
                     coin_red_1.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_red_1);
-                    coins.add(new Coins(row, col, coin_red_1, "coin_red_1"));
+                    coins.add(coin_red_1);
                 }
 
                 if(row == 2 && col == 3)
                 {
-                    Circle coin_red_2 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_red_2 = new Coins(row, col, "coin_red_2", SQUARE_SIZE / 2 - 2);
                     coin_red_2.setFill(Color.RED);
                     coin_red_2.setStroke(Color.BLACK); // Set the border color to black
                     coin_red_2.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_red_2);
-                    coins.add(new Coins(row, col, coin_red_2, "coin_red_2"));
+                    coins.add(coin_red_2);
 
                 }
 
                  if(row == 3 && col == 3)
                 {
-                    Circle coin_red_3 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_red_3 = new Coins(row, col, "coin_red_2", SQUARE_SIZE / 2 - 2);
                     coin_red_3.setFill(Color.RED);
                     coin_red_3.setStroke(Color.BLACK); // Set the border color to black
                     coin_red_3.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_red_3);
-                    coins.add(new Coins(row, col, coin_red_3, "coin_red_3"));
+                    coins.add(coin_red_3);
 
                 }
 
                  if(row == 3 && col == 2)
                 {
-                    Circle coin_red_4 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_red_4 = new Coins(row, col, "coin_red_4",SQUARE_SIZE / 2 - 2);
                     coin_red_4.setFill(Color.RED);
                     coin_red_4.setStroke(Color.BLACK); // Set the border color to black
                     coin_red_4.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_red_4);
-                    coins.add(new Coins(row, col, coin_red_4, "coin_red_4"));
+                    coins.add(coin_red_4);
 
                 }
 
-                //green coins code
+                // //green coins code
 
                 if(row == 3 && col == 11)
                 {
-                    Circle coin_green_1 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_green_1 = new Coins(row, col, "coin_green_1",SQUARE_SIZE / 2 - 2);
                     coin_green_1.setFill(Color.GREEN);
                     coin_green_1.setStroke(Color.BLACK); // Set the border color to black
                     coin_green_1.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_green_1);
-                    coins.add(new Coins(row, col, coin_green_1, "coin_green_1"));
+                    coins.add(coin_green_1);
 
                 }
 
                 if(row == 3 && col == 12)
                 {
-                    Circle coin_green_2 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_green_2 = new Coins(row, col, "coin_green_2",SQUARE_SIZE / 2 - 2);
                     coin_green_2.setFill(Color.GREEN);
                     coin_green_2.setStroke(Color.BLACK); // Set the border color to black
                     coin_green_2.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_green_2);
-                    coins.add(new Coins(row, col, coin_green_2, "coin_green_2"));
+                    coins.add(coin_green_2);
 
                 }
 
                 if(row == 2 && col == 11)
                 {
-                    Circle coin_green_3 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_green_3 = new Coins(row, col, "coin_green_3",SQUARE_SIZE / 2 - 2);
                     coin_green_3.setFill(Color.GREEN);
                     coin_green_3.setStroke(Color.BLACK); // Set the border color to black
                     coin_green_3.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_green_3);
-                    coins.add(new Coins(row, col, coin_green_3, "coin_green_3"));
+                    coins.add(coin_green_3);
 
                 }
 
                 if(row == 2 && col == 12)
                 {
-                    Circle coin_green_4 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_green_4 = new Coins(row, col, "coin_green_4",SQUARE_SIZE / 2 - 2);
                     coin_green_4.setFill(Color.GREEN);
                     coin_green_4.setStroke(Color.BLACK); // Set the border color to black
                     coin_green_4.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_green_4);
-                    coins.add(new Coins(row, col, coin_green_4, "coin_green_4"));
+                    coins.add(coin_green_4);
 
                 }
                 
-                //blue coins code
+                // //blue coins code
 
                 if(row == 11 && col == 12)
                 {
-                    Circle coin_blue_1 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_blue_1 = new Coins(row, col, "coin_green_4",SQUARE_SIZE / 2 - 2);
                     coin_blue_1.setFill(Color.BLUE);
                     coin_blue_1.setStroke(Color.BLACK); // Set the border color to black
                     coin_blue_1.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_blue_1);
-                    coins.add(new Coins(row, col, coin_blue_1, "coin_blue_1"));
+                    coins.add(coin_blue_1);
 
                 }
 
                 if(row == 12 && col == 12)
                 {
-                    Circle coin_blue_2 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_blue_2 = new Coins(row, col, "coin_blue_2",SQUARE_SIZE / 2 - 2);
                     coin_blue_2.setFill(Color.BLUE);
                     coin_blue_2.setStroke(Color.BLACK); // Set the border color to black
                     coin_blue_2.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_blue_2);
-                    coins.add(new Coins(row, col, coin_blue_2, "coin_blue_2"));
+                    coins.add(coin_blue_2);
 
                 }
 
                 if(row == 11 && col == 11)
                 {
-                    Circle coin_blue_3 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_blue_3 = new Coins(row, col, "coin_blue_3",SQUARE_SIZE / 2 - 2);
                     coin_blue_3.setFill(Color.BLUE);
                     coin_blue_3.setStroke(Color.BLACK); // Set the border color to black
                     coin_blue_3.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_blue_3);
-                    coins.add(new Coins(row, col, coin_blue_3, "coin_blue_3"));
+                    coins.add(coin_blue_3);
 
                 }
 
                 if(row == 12 && col == 11)
                 {
-                    Circle coin_blue_4 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_blue_4 = new Coins(row, col, "coin_blue_4",SQUARE_SIZE / 2 - 2);
                     coin_blue_4.setFill(Color.BLUE);
                     coin_blue_4.setStroke(Color.BLACK); // Set the border color to black
                     coin_blue_4.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_blue_4);
-                    coins.add(new Coins(row, col, coin_blue_4, "coin_blue_4"));
+                    coins.add(coin_blue_4);
 
                 }
                 
-                //yellow coins code
+                // //yellow coins code
 
                 if(row == 11 && col == 2)
                 {
-                    Circle coin_yellow_1 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_yellow_1 = new Coins(row, col, "coin_yellow_1",SQUARE_SIZE / 2 - 2);
                     coin_yellow_1.setFill(Color.YELLOW);
                     coin_yellow_1.setStroke(Color.BLACK); // Set the border color to black
                     coin_yellow_1.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_yellow_1);
-                coins.add(new Coins(row, col, coin_yellow_1, "coin_yellow_1"));
+                coins.add(coin_yellow_1);
                 }
 
-                 if(row == 11 && col == 3)
+                if(row == 11 && col == 3)
                 {
-                    Circle coin_yellow_2 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_yellow_2 = new Coins(row, col, "coin_yellow_2",SQUARE_SIZE / 2 - 2);
                     coin_yellow_2.setFill(Color.YELLOW);
                     coin_yellow_2.setStroke(Color.BLACK); // Set the border color to black
                     coin_yellow_2.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_yellow_2);
-                    coins.add(new Coins(row, col, coin_yellow_2, "coin_yellow_2"));
+                coins.add(coin_yellow_2);
                 }
 
-                 if(row == 12 && col == 2)
+                if(row == 12 && col == 2)
                 {
-                    Circle coin_yellow_3 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_yellow_3 = new Coins(row, col, "coin_yellow_3",SQUARE_SIZE / 2 - 2);
                     coin_yellow_3.setFill(Color.YELLOW);
                     coin_yellow_3.setStroke(Color.BLACK); // Set the border color to black
                     coin_yellow_3.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_yellow_3);
-                    coins.add(new Coins(row, col, coin_yellow_3, "coin_yellow_3"));
+                coins.add(coin_yellow_3);
                 }
 
                 if(row == 12 && col == 3)
                 {
-                    Circle coin_yellow_4 = new Circle(SQUARE_SIZE / 2 - 2);
+                    Coins coin_yellow_4 = new Coins(row, col, "coin_yellow_4",SQUARE_SIZE / 2 - 2);
                     coin_yellow_4.setFill(Color.YELLOW);
                     coin_yellow_4.setStroke(Color.BLACK); // Set the border color to black
                     coin_yellow_4.setStrokeWidth(2); // Set the width of the border
                     square.getChildren().add(coin_yellow_4);
-                    coins.add(new Coins(row, col, coin_yellow_4, "coin_yellow_4"));
+                coins.add(coin_yellow_4);
                 }
+                squareRow.add(col, square);
 
-
-                board.add(square, col, row);
+                //board.add(square, col, row);
             }
+            squares.add(row, squareRow);
         }
-            
+        
+        for (int i = 0; i < squares.size(); i++)
+            for (int j = 0; j < squares.get(i).size(); j++)
+                board.add(squares.get(i).get(j), i, j);
+        
         root.setCenter(board);
 
-       Roll_dice dice = new Roll_dice();
+       Roll_dice dice = new Roll_dice(squares, coins);
        root.setBottom(dice.createControls());
 
         // Create a scene and add the root pane to it
@@ -280,8 +287,8 @@ public class Test extends Application {
     public static void main(String[] args) {
         launch(args);
        
-            System.out.println(coins.get(6).getname());
-                        System.out.println(coins.get(6).getCol());
-            System.out.println(coins.get(6).getRow());
+            //System.out.println(coins.get(6).getname());
+            //            System.out.println(coins.get(6).getCol());
+            //System.out.println(coins.get(6).getRow());
     }
 }

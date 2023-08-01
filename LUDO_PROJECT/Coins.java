@@ -10,16 +10,15 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
-public class Coins {
+public class Coins extends Circle {
         private int row;
         private int col;
-        private Circle circle;
         private String name;
 
-        public Coins(int row, int col, Circle circle, String name) {
+        public Coins(int row, int col, String name, double radius) {
+            super(radius);
             this.row = row;
             this.col = col;
-            this.circle = circle;
             this.name = name;
         }
 
@@ -42,9 +41,5 @@ public class Coins {
 
         public void setCol(int col) {
             this.col = col;
-        }
-
-        public Circle getCircle() {
-            return circle;
         }
     }
