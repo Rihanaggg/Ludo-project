@@ -1,6 +1,7 @@
 package LUDO_PROJECT;
 
 import java.util.List;
+import java.util.Random;
 
 import javafx.geometry.Insets;
 import javafx.scene.Node;
@@ -12,6 +13,10 @@ import javafx.scene.layout.StackPane;
 
 public class Roll_dice {
     private Label diceLabel;
+
+    private int maxValue;
+    private Random random;
+    private int consecutiveSixes ;
 
     private List<List<StackPane>> squares;
     private List<Coins> coins;
@@ -47,11 +52,34 @@ public class Roll_dice {
 
         coin.setRow(7);
         coin.setCol(roll);
+        if(roll == 6){
+            coin.setRow(6);
+            coin.setCol(1);
+        }
         System.out.println("row" + coin.getRow() + "col" + coin.getCol());
         // squares.get(7).get(roll).getChildren().add(coin);
         boolean fail = squares.get(coin.getRow()).get(coin.getCol()).getChildren().add(coin);
         System.out.println(fail);
 
     }
+
+    public  int roll() {
+
+        int diceValue = random.nextInt(maxValue) + 1;
+        if(diceValue == 6){
+            consecutiveSixes++ ;
+            // for 3 times consecutive 6
+            if(consecutiveSixes == 3){
+                consecutiveSixes = 0;
+                diceValue = 0;
+            }else{
+                //addition of 1 roll for getting 6
+                diceValue += roll();
+            }
+        }else {
+            consecutiveSixes = 0;
+        }
+        return diceValue;
+    }    
 
 }
