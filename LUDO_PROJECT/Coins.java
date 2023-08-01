@@ -35,9 +35,59 @@ public class Coins extends Circle {
             this.col = col;
         }
 
+        // public boolean isHome(){
+        //     Coins c = new Coins(row, col, name, col);
+        //     switch("Color"){
+        //         case "RED":
+        //             if(c.getRow() == 2 && c.getCol() == 2 ){
+        //                 return true;
+        //             }else if(c.getRow() ==2 && c.getCol() == 3){
+        //                 return true;
+        //             }else if(c.getRow() ==3 && c.getCol() == 2){
+        //                 return true;
+        //             }else if(c.getRow() ==3 && c.getCol() == 3){
+        //                 return true;
+        //             }
+                
+        //         case "YELLOW":
+        //            if(c.getRow() == 11 && c.getCol() == 2 ){
+        //                 return true;
+        //             }else if(c.getRow() ==11 && c.getCol() == 3){
+        //                 return true;
+        //             }else if(c.getRow() ==12 && c.getCol() == 2){
+        //                 return true;
+        //             }else if(c.getRow() ==12 && c.getCol() == 3){
+        //                 return true;
+        //             } 
+
+        //         case "BLUE":
+        //             if(c.getRow() == 11 && c.getCol() == 11 ){
+        //                 return true;
+        //             }else if(c.getRow() ==11 && c.getCol() == 12){
+        //                 return true;
+        //             }else if(c.getRow() ==12 && c.getCol() == 11){
+        //                 return true;
+        //             }else if(c.getRow() ==12 && c.getCol() == 12){
+        //                 return true;
+        //             }
+                
+        //         case "GREEN":
+        //            if(c.getRow() == 2 && c.getCol() == 11 ){
+        //                 return true;
+        //             }else if(c.getRow() ==2 && c.getCol() == 12){
+        //                 return true;
+        //             }else if(c.getRow() ==3 && c.getCol() == 11){
+        //                 return true;
+        //             }else if(c.getRow() ==3 && c.getCol() == 12){
+        //                 return true;
+        //             } 
+        //     }
+        //     return false;
+        // }
+
         public boolean isHome(){
-            return true;
-        }
+            return true;            
+        } 
 
         public boolean isFinalPath(){
             return false;            
