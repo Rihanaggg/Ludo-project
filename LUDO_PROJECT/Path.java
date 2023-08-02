@@ -26,5 +26,15 @@ static int[][] initialy= { // y coordinates of initial position of each player
         {11,12,11,12}
 };
 
+public static Position nextAfter(Coins coin, Player player, int diceRoll) {
+        //if (player == )
+        if(player==player.p1){
+        }
+        //then get the position of the coin
+        //look at whatever you've defined in this class to get the next position
+        //return it and use it in whatever method you please.
+        return new Position(0, 0);
+}
+
 
 }

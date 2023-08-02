@@ -49,17 +49,13 @@ public class Roll_dice {
             coin.setCol(6);
             squares.get(coin.getRow()).get(coin.getCol()).getChildren().remove(coin);
             squares.get(coin.getRow()).get(coin.getCol()).getChildren().add(coin);
-        }else if(coin.isHome() && roll!=6){            
-            coin.setRow(coin.getRow());
-            coin.setCol(coin.getCol());
-            squares.get(coin.getRow()).get(coin.getCol()).getChildren().remove(coin);
-            squares.get(coin.getRow()).get(coin.getCol()).getChildren().add(coin);
-        }else{
+        }else if (!coin.isHome()){
             coin.setRow(5);
             coin.setCol(roll);
             squares.get(coin.getRow()).get(coin.getCol()).getChildren().remove(coin);
-            squares.get(coin.getRow()).get(coin.getCol()).getChildren().add(coin);
-
+            Position nextPosition = Path.nextAfter(coin, null, roll);
+            //if nextPosition contains a coin of another player, do cut action
+            squares.get(nextPosition.getX()).get(nextPosition.getY()).getChildren().add(coin);
             
         }
         System.out.println("row" + coin.getRow() + "col" + coin.getCol());

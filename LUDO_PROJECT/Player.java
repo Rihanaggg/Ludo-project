@@ -41,10 +41,10 @@ public class Player {
     Player p3 = new Player("Player3" , Color.BLUE);
     Player p4 = new Player("Player4" , Color.GREEN);
 
-    int[][] positions = p1.getPosition();
-    for(int i=0;i<positions.length;i++){
-        for(int j=0;j<positions[i].length;j++){
-            System.out.println(positions[i][j]);
-        }
-    }
+    // int[][] positions = p1.getPosition()
+    // for(int i=0;i<positions.length;i++){
+    //     for(int j=0;j<positions[i].length;j++){
+    //         System.out.println(positions[i][j]);
+    //     }
+    // }
 }

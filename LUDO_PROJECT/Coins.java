@@ -5,6 +5,7 @@ public class Coins extends Circle {
         private int row;
         private int col;
         private String color;
+        private Position position;
         
 
         public Coins(int row, int col, String color, double radius) {
