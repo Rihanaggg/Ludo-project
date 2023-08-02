@@ -44,12 +44,18 @@ public class Roll_dice {
     public void moveCoin(Coins coin , int roll)
     {
         if(coin.isHome() && roll == 6){
-            coin.setRow(6);
-            coin.setCol(1);
+
+            coin.setRow(1);
+            coin.setCol(6);
+            squares.get(coin.getRow()).get(coin.getCol()).getChildren().remove(coin);
+            squares.get(coin.getRow()).get(coin.getCol()).getChildren().add(coin);
+        }else if(coin.isHome() && roll!=6){            
+            coin.setRow(coin.getRow());
+            coin.setCol(coin.getCol());
             squares.get(coin.getRow()).get(coin.getCol()).getChildren().remove(coin);
             squares.get(coin.getRow()).get(coin.getCol()).getChildren().add(coin);
         }else{
-            coin.setRow(7);
+            coin.setRow(5);
             coin.setCol(roll);
             squares.get(coin.getRow()).get(coin.getCol()).getChildren().remove(coin);
             squares.get(coin.getRow()).get(coin.getCol()).getChildren().add(coin);
@@ -79,6 +85,8 @@ public class Roll_dice {
             consecutiveSixes = 0;
         }
         return diceValue;
-    }    
+    }   
+    
+
 
 }

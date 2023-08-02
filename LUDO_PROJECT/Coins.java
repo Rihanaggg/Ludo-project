@@ -4,14 +4,14 @@ import javafx.scene.shape.Circle;
 public class Coins extends Circle {
         private int row;
         private int col;
-        private String name;
+        private String color;
         
 
-        public Coins(int row, int col, String name, double radius) {
+        public Coins(int row, int col, String color, double radius) {
             super(radius);
             this.row = row;
             this.col = col;
-            this.name = name;
+            this.color = color;
         }
 
         public int getRow() {
@@ -26,9 +26,9 @@ public class Coins extends Circle {
             return col;
         }
 
-        public String getname()
+        public String getcolor()
         {
-            return name;
+            return color;
         }
 
         public void setCol(int col) {
@@ -36,8 +36,8 @@ public class Coins extends Circle {
         }
 
         public boolean isHome(){
-            Coins c = new Coins(row, col, name, col);
-            switch("Color"){
+            Coins c = new Coins(row, col,"RED", col);
+            switch(color){
                 case "RED":
                     if(c.getRow() == 2 && c.getCol() == 2 ){
                         return true;
