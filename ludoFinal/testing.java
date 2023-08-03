@@ -5,13 +5,13 @@ import java.awt.event.*;
 
  
 // This is the class for the the game moves
- class GameMoves extends JPanel implements KeyListener, ActionListener,MouseListener{
+ class Game extends JPanel implements KeyListener, ActionListener,MouseListener{
 	Layout la; // This is the object for the layout class
 	Build_Player p; // This is the object for the build player class
 	int current_player,dice; // This is the variable for the current player and the dice
 	int flag=0,roll,kill=0; // This is the flag for the dice roll and the kill variable
 
-	public GameMoves() {
+	public Game() {
         setFocusTraversalKeysEnabled(false);
         requestFocus();
         current_player=0; // first player is set to red
@@ -31,7 +31,8 @@ import java.awt.event.*;
     	la.draw((Graphics2D)g);
     	p.draw((Graphics2D)g);
 
-    	if(p.pl[current_player].coin==4) { // This is the condition for the winner
+		// condition for winning
+    	if(p.pl[current_player].coin==4) { 
     		g.setColor(Color.WHITE);
     		g.fillRect(590, 100, 380,130);
 
@@ -60,7 +61,9 @@ import java.awt.event.*;
             roll=0;
             kill=0;
     	}
-    	else if(dice!=0) { // This is the condition for the dice roll
+
+		//role dice
+    	else if(dice!=0) { 
 
     		g.setColor(Color.WHITE);
     		g.fillRect(590, 100, 260,200);
@@ -68,6 +71,8 @@ import java.awt.event.*;
 			g.setColor(Color.BLACK);
 			g.setFont(new Font("Times", Font.BOLD, 40));
 			g.drawString("Ludo Game", 600, 300);
+
+			
 
     		if(current_player==0) {
 				g.setColor(Color.RED);
@@ -96,7 +101,7 @@ import java.awt.event.*;
 				g.drawString("BLUE's turn:", 600, 150);
 			}
 
-			// draw dice
+			// drawing dice
 			g.setColor(Color.BLACK);
 			g.setFont(new Font("MV Boli", Font.BOLD, 30));
 			g.drawString(""+ dice, 820, 150);
@@ -109,9 +114,9 @@ import java.awt.event.*;
 
 	
 	public void keyPressed(KeyEvent e) {
-		if (e.getKeyCode() == KeyEvent.VK_ENTER && flag==0) { // if enter is pressed the dice is rolled
+		if (e.getKeyCode() == KeyEvent.VK_ENTER && flag==0) { // key press to roll dice
 			roll=0;
-			dice = 1 + (int)(Math.random() * 6); // random number is generated for the dice roll 
+			dice = 1 + (int)(Math.random() * 6);
 			repaint();
 			for(int i=0;i<4;i++) {
     			if(p.pl[current_player].pa[i].current != -1&& p.pl[current_player].pa[i].current != 56 && (p.pl[current_player].pa[i].current + dice)<=56) {
@@ -160,8 +165,8 @@ import java.awt.event.*;
 					for(int i=0;i<4;i++) {
 						if(i!=current_player) {
 							for(int j=0;j<4;j++) {
-								int tem1=Path.ax[current_player][p.pl[current_player].pa[value].current],tem2=Path.ay[current_player][p.pl[current_player].pa[value].current];
-								if(p.pl[i].pa[j].x==tem1&&p.pl[i].pa[j].y==tem2) {
+								int temp1=Path.ax[current_player][p.pl[current_player].pa[value].current],temp2=Path.ay[current_player][p.pl[current_player].pa[value].current];
+								if(p.pl[i].pa[j].x==temp1&&p.pl[i].pa[j].y==temp2) {
 									p.pl[i].pa[j].current=-1;
 									kill=1;
 									k=1;
@@ -223,7 +228,6 @@ import java.awt.event.*;
 		}
 	}
 
-	// these functions are not used but are compulsory to be defined as they are abstract functions of MouseListener
 	public void actionPerformed(ActionEvent e) {
 	}
 
@@ -251,7 +255,6 @@ import java.awt.event.*;
 
 
  class Testing {
-		// Run the application from here
 	   public static void main(String[] args) {
 	        JFrame jframe = new JFrame();
 	        jframe.setBounds(10,10,1000,600);
@@ -259,7 +262,7 @@ import java.awt.event.*;
 	        jframe.setTitle("LUDO");
 	        jframe.setResizable(true);
 	        jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	        GameMoves gm = new GameMoves();
+	        Game gm = new Game();
 	        gm.setFocusable(true);
 	        gm.addKeyListener(gm);
 	        gm.addMouseListener(gm);
