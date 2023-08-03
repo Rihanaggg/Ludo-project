@@ -9,16 +9,16 @@ import java.awt.event.*;
 	int height,width;
 	public Coin(int h,int w){ // Constructor to initialize Coin
 		current=-1;
-		x=0;
-		y=0;
+		x=-1;
+		y=-1;
 		height=h;
 		width=w;
 	}
 	// Function to draw Coin on board 
 	public void draw(Graphics2D g, int i, int j,int player) {
 		if(current==-1) { // If Coin is not on board 
-			int temp1=100+(height/2);
-			int temp2=70+(width/2); // Initial position of Coin 
+			int temp1=80+(height/2);
+			int temp2=50+(width/2); // Initial position of Coin 
 			x=i; // x coordinate of Coin
 			y=j; // y coordinate of Coin
 			if(player==0) { // If player 1 
@@ -40,7 +40,7 @@ import java.awt.event.*;
 		}
 		else 
 		{ // If Coin is on board 
-			int temp1=100,temp2=70; // Initial home position of board
+			int temp1=80,temp2=50; // Initial home position of board
 			x=Path.ax[player][current]; // x coordinate of Coin
 			y=Path.ay[player][current]; // y coordinate of Coin
 			if(player==0) {
