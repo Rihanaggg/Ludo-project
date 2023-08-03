@@ -1,8 +1,26 @@
 Ludo-project-final
-group project for bootcamp Team Members
+group project for bootcamp 
+Team Members
 
 Rucha Chavan
 K Sidhartha Reddy
 K Akhila
 Ankush Das
 Brunda
+
+<h1>How to Play</h1>
+<p>Clone or download the repository to your local machine.
+Open the project in your Java IDE (e.g., Eclipse, IntelliJ, etc.).
+Compile and run the Testing.java class to start the game.
+The game window will open, and the Ludo board will be displayed.
+The game supports up to 4 players. Players take turns based on the color of their pieces (Red, Green, Yellow, and Blue).
+Press the Enter key to roll the dice.
+If the dice shows a number other than 6, you can move one of your pieces forward according to the number on the dice. If you roll a 6, you can either move one of your pieces from the starting position or move one of your pieces forward by six steps.
+If you land on a position occupied by an opponent's piece, the opponent's piece will be sent back to its starting position (killed).
+The objective is to move all your pieces from the starting area to the home area by exact dice rolls.
+The first player to get all four pieces to the home area wins the game.</p>
+
+
+<h1>Controls<h1/>
+<p>Enter key: Roll the dice and start your turn.
+Mouse click: If you roll a 6, click on one of your pieces to move it from the starting position. If you roll a number other than 6, click on one of your pieces on the board to move it forward.</p>
