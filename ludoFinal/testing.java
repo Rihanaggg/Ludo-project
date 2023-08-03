@@ -4,12 +4,12 @@ import java.awt.event.*;
 
 
  
-// This is the class for the the game moves
+// Game logic
  class Game extends JPanel implements KeyListener, ActionListener,MouseListener{
-	Layout la; // This is the object for the layout class
-	Build_Player p; // This is the object for the build player class
-	int current_player,dice; // This is the variable for the current player and the dice
-	int flag=0,roll,kill=0; // This is the flag for the dice roll and the kill variable
+	Layout la; 
+	Build_Player p; 
+	int current_player,dice; 
+	int flag=0,roll,kill=0; 
 
 	public Game() {
         setFocusTraversalKeysEnabled(false);
