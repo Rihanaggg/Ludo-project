@@ -14,6 +14,14 @@ import java.awt.event.*;
 		height=h;
 		width=w;
 	}
+
+	public int getX(){
+		return this.x;
+	}
+
+	public int getY(){
+		return this.y;
+	}
 	//this function draws coins
 	public void draw(Graphics2D g, int i, int j,int player) { //this is for the inital position of the coin
 		if(current==-1) { 

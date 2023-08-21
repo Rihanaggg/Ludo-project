@@ -1,16 +1,32 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 // class that draws board
- class Layout {
+ class Layout extends JPanel
+ {
 	int x,y,width,height; 
+	private boolean isButtonPressed = false;
 	public Layout(int Xcor,int Ycor) { 
 		x=Xcor;
 		y=Ycor;
 		width=30;
 		height=30;
 	}
+
+	public void ButtonExample() {
+			JButton button = new JButton("Click Me");
+			button.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					isButtonPressed = !isButtonPressed;
+					repaint();
+				}
+			});
+			add(button);
+		}
 
 	// drawing the board
 	public void draw(Graphics2D g){
@@ -149,6 +165,24 @@ import java.awt.event.*;
         g.drawOval(x+5+(8*width),y+5+(12*height),width-10,height-10);
         g.drawOval(x+5+(2*width),y+5+(8*height),width-10,height-10);
         g.setFont(new Font("Times", Font.BOLD, 40));
+
+		int x = 700;
+        int y = 50;
+        int width = 200;
+        int height = 40;
+
+        g.setColor(isButtonPressed ? Color.GREEN : Color.LIGHT_GRAY);
+        g.fillRect(x, y, width, height);
+
+        g.setColor(Color.BLACK);
+        g.drawRect(x, y, width, height);
+
+        g.setColor(Color.BLACK);
+        String buttonText = isButtonPressed ? "Pressed!" : "Click Me";
+        FontMetrics fontMetrics = g.getFontMetrics();
+        int textX = x + (width - fontMetrics.stringWidth(buttonText)) / 2;
+        int textY = y + ((height - fontMetrics.getHeight()) / 2) + fontMetrics.getAscent();
+        g.drawString(buttonText, textX, textY);
        
     }
 }
